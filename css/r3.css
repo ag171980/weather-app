@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body .noticia {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 1300px;
+  margin: 0 auto; }
+  body .noticia .imagen {
+    background: linear-gradient(0deg, black 0%, rgba(238, 238, 238, 0.2777485994) 100%), url("../media/pandemic.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    body .noticia .imagen button {
+      border: none;
+      outline: none;
+      background: white;
+      padding: 25px;
+      height: 30px;
+      width: 30px;
+      border-radius: 40px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; }
+  body .noticia .texto {
+    padding: 25px;
+    width: 600px; }
+    body .noticia .texto h2 {
+      font-weight: bolder;
+      line-height: 35px; }
+body .video-modal {
+  display: none;
+  transition: 0.5s all; }
+body .on {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s all; }
+  body .on .video {
+    position: absolute;
+    z-index: 1; }
+    body .on .video video {
+      width: 700px; }
+  body .on i {
+    color: white;
+    font-size: 21px;
+    position: absolute;
+    right: 20px;
+    top: 20px; }
+    body .on i:hover {
+      cursor: pointer; }
+
+@media (max-width: 1300px) {
+  body .noticia {
+    width: 768px; } }
+@media (max-width: 768px) {
+  body .noticia {
+    flex-direction: column; }
+    body .noticia .imagen {
+      width: 500px;
+      height: 500px; }
+    body .noticia .texto {
+      padding: 10px 0px;
+      width: 500px; } }
+@media (max-width: 425px) {
+  body .noticia {
+    width: 100vw; }
+    body .noticia .imagen {
+      height: 300px;
+      width: 100vw; }
+    body .noticia .texto {
+      width: 100vw;
+      padding: 7px; }
+  body .on .video video {
+    width: 300px; } }
+
+/*# sourceMappingURL=r3.css.map */
