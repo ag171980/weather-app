@@ -1,13 +1,12 @@
 // http://api.weatherstack.com/
 let weather = document.getElementById("search-weather")
 let tabla = document.getElementById("table-weather")
-console.log(weather.value)
-document.getElementById("btn-search").addEventListener("click", () => {
 
+document.getElementById("btn-search").addEventListener("click", () => {
     fetch(`http://api.weatherstack.com/current?access_key=81a63c7a86b1c1d629bfb564ceb98227&query=${weather.value}`)
         .then(response => response.json())
         .then(function (data) {
-            console.log(data.current)
+            console.log(data)
             let weather = {
                 icon: data.current.weather_icons[0],
                 temperature: data.current.temperature,
