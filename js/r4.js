@@ -6,6 +6,7 @@ document.getElementById("btn-search").addEventListener("click", () => {
     fetch(`http://api.weatherstack.com/current?access_key=81a63c7a86b1c1d629bfb564ceb98227&query=${weather.value}`)
         .then(response => response.json())
         .then(function (data) {
+            console.log(data.current)
             let weather = {
                 icon: data.current.weather_icons[0],
                 temperature: data.current.temperature,
